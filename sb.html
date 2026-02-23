@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>豬隻品種介紹</title>
     <style>
-        /* 基礎設置與背景 */
+        /* 背景 */
         body {
             background: linear-gradient(180deg, #ffffff 0%, #ffdfe9 100%);
             background-attachment: fixed;
@@ -16,7 +16,7 @@
             color: #444;
         }
 
-        /* 標題區塊自適應 */
+        /* 標題區塊 */
         .a1 {
             display: flex;
             align-items: center;
@@ -30,11 +30,11 @@
         }
 
         .a2 {
-            width: 60px; /* 手機上縮小圖標 */
+            width: 60px; /* 縮小圖標 */
             height: auto;
         }
 
-        /* 漢堡選單按鈕 */
+        /* 選單按鈕 */
         .hamburger-container {
             width: 45px;
             height: 45px;
@@ -44,7 +44,7 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            position: fixed; /* 改為固定位置，方便手機操作 */
+            position: fixed; /* 固定位置 */
             left: 20px;
             top: 20px;
             z-index: 1001;
@@ -59,7 +59,7 @@
         .hamburger-icon::before { content: ""; top: -8px; left: 0; }
         .hamburger-icon::after { content: ""; bottom: -8px; left: 0; }
 
-        /* 目錄選單 */
+        /* 選單 */
         .nav-menu {
             display: none;
             list-style: none;
@@ -86,10 +86,10 @@
             text-align: center;
         }
 
-        /* 裝飾豬隻橫列 - 解決手機溢出問題 */
+        /* 豬 */
         .k1 {
             display: flex;
-            overflow-x: auto; /* 手機可左右滑動 */
+            overflow-x: auto; 
             gap: 15px;
             width: 95%;
             margin: 30px auto;
@@ -97,7 +97,7 @@
             padding: 15px;
             border-radius: 30px;
             background-color: #ffffff;
-            scrollbar-width: none; /* 隱藏捲軸 */
+            scrollbar-width: none; 
         }
         .k1 img {
             width: 60px;
@@ -105,12 +105,12 @@
             transition: transform 0.3s;
         }
 
-        /* 主內容區域佈局 */
+        /* 主內容 */
         .main-wrapper {
             max-width: 1000px;
             margin: 0 auto;
             display: flex;
-            flex-direction: column; /* 預設垂直排列(手機) */
+            flex-direction: column; /* 垂直排列 */
             gap: 30px;
         }
 
@@ -124,13 +124,13 @@
         }
 
         img {
-            max-width: 100%; /* 關鍵：圖片不超出螢幕 */
+            max-width: 100%; /* 圖片不超出螢幕 */
             height: auto;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        /* 小百科側邊欄 - 電腦版會變側邊 */
+        /* 百科側邊欄 */
         .fun-fact-sidebar {
             width: 100%;
         }
@@ -160,10 +160,10 @@
             top: 0;
         }
 
-        /* --- 響應式調整 (螢幕寬度大於 800px 時) --- */
+        /* 螢幕大於 800px */
         @media (min-width: 800px) {
             .main-wrapper {
-                flex-direction: row; /* 電腦版恢復左右排列 */
+                flex-direction: row; /* 電腦版恢復 */
                 align-items: flex-start;
             }
             .content-area {
@@ -277,7 +277,7 @@
     e.stopPropagation();
   });
 
-  // 點擊空白處關閉選單
+  // 點擊空白處關閉
   document.addEventListener('click', () => {
     navList.classList.remove('active');
   });
@@ -291,4 +291,5 @@
 </script>
 
 </body>
+
 </html>
