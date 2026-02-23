@@ -1,294 +1,489 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>豬隻品種介紹</title>
-    <style>
-        /* 基礎設置與背景 */
-        body {
-            background: linear-gradient(180deg, #ffffff 0%, #ffdfe9 100%);
-            background-attachment: fixed;
-            margin: 0;
-            padding: 20px;
-            font-family: sans-serif;
-            line-height: 1.6;
-            color: #444;
-        }
-
-        /* 標題區塊自適應 */
-        .a1 {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            justify-content: center;
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.5rem;
-            text-align: center;
-        }
-
-        .a2 {
-            width: 60px; /* 手機上縮小圖標 */
-            height: auto;
-        }
-
-        /* 漢堡選單按鈕 */
-        .hamburger-container {
-            width: 45px;
-            height: 45px;
-            background-color: #424242;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            position: fixed; /* 改為固定位置，方便手機操作 */
-            left: 20px;
-            top: 20px;
-            z-index: 1001;
-        }
-
-        .hamburger-icon, .hamburger-icon::before, .hamburger-icon::after {
-            width: 22px;
-            height: 3px;
-            background-color: #fff;
-            position: absolute;
-        }
-        .hamburger-icon::before { content: ""; top: -8px; left: 0; }
-        .hamburger-icon::after { content: ""; bottom: -8px; left: 0; }
-
-        /* 目錄選單 */
-        .nav-menu {
-            display: none;
-            list-style: none;
-            padding: 15px;
-            position: fixed;
-            top: 70px;
-            left: 20px;
-            border: 2px dashed #ffcbd5;
-            border-radius: 20px;
-            background-color: rgba(255, 255, 255, 0.98);
-            width: 200px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-            z-index: 1000;
-        }
-        .nav-menu.active { display: block; }
-        .nav-menu li { margin-bottom: 8px; }
-        .nav-menu a {
-            text-decoration: none;
-            color: #555;
-            display: block;
-            padding: 8px;
-            background: #f8f9fa;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        /* 裝飾豬隻橫列 - 解決手機溢出問題 */
-        .k1 {
-            display: flex;
-            overflow-x: auto; /* 手機可左右滑動 */
-            gap: 15px;
-            width: 95%;
-            margin: 30px auto;
-            border: 4px dashed #ffdada;
-            padding: 15px;
-            border-radius: 30px;
-            background-color: #ffffff;
-            scrollbar-width: none; /* 隱藏捲軸 */
-        }
-        .k1 img {
-            width: 60px;
-            flex-shrink: 0;
-            transition: transform 0.3s;
-        }
-
-        /* 主內容區域佈局 */
-        .main-wrapper {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column; /* 預設垂直排列(手機) */
-            gap: 30px;
-        }
-
-        /* 豬隻品種樣式 */
-        h3 {
-            border-left: 8px solid #ff99ab;
-            background: linear-gradient(90deg, #fff0f3 0%, transparent 100%);
-            padding: 10px 20px;
-            margin-top: 30px;
-            border-bottom: 1px dashed #ffcbd5;
-        }
-
-        img {
-            max-width: 100%; /* 關鍵：圖片不超出螢幕 */
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        /* 小百科側邊欄 - 電腦版會變側邊 */
-        .fun-fact-sidebar {
-            width: 100%;
-        }
-
-        .fact-card {
-            background: #fff5f7;
-            border-radius: 20px;
-            padding: 20px;
-            box-shadow: 0 10px 20px rgba(255, 182, 193, 0.2);
-        }
-
-        .fact-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .fact-list li {
-            position: relative;
-            padding-left: 35px;
-            margin-bottom: 15px;
-        }
-
-        .fact-list li::before {
-            content: "🐷";
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-
-        /* --- 響應式調整 (螢幕寬度大於 800px 時) --- */
-        @media (min-width: 800px) {
-            .main-wrapper {
-                flex-direction: row; /* 電腦版恢復左右排列 */
-                align-items: flex-start;
-            }
-            .content-area {
-                flex: 1;
-            }
-            .fun-fact-sidebar {
-                flex: 0 0 300px;
-                position: sticky;
-                top: 20px;
-            }
-            .a1 { font-size: 2.5rem; }
-            .a2 { width: 100px; }
-        }
-    </style>
+    <title>Document</title>
+   
 </head>
+<!-- 背景顏色 -->
+<style>
+body {
+   
+    background: linear-gradient(180deg, #ffffff 0%, #ffdfe9 100%);
+    background-attachment: fixed; 
+}
+
+</style>
 <body>
+  <!-- 背景 -->
+  <style>
+
+    
+  </style>
+
+  <!-- 第一區塊 豬隻品種介紹 -->
 
 <h1 class="a1">
   <div class="hamburger-container" id="menu-toggle"> 
     <div class="hamburger-icon"></div>
   </div>
-  <img src="./小豬圖標.jpg" alt="小豬圖標" class="a2">
+  <img src="./小豬圖標.jpg" width="100" alt="小豬圖標" class="a2">
   豬隻品種介紹
-  <img src="./小豬圖標.jpg" alt="小豬圖標" class="a2">
+  <img src="./小豬圖標.jpg" width="100" alt="小豬圖標" class="a2">
 </h1>
 
+ <!-- 第二區塊 目錄 -->
+
+<h2 id="menu-label">目錄</h2>
 <ul class="nav-menu" id="nav-list">
-  <li><a href="#a">藍瑞斯</a></li>
-  <li><a href="#b">約克夏</a></li>
-  <li><a href="#c">杜洛克</a></li>
-  <li><a href="#d">盤克夏</a></li>
-  <li><a href="#e">伊比利</a></li>
-  <li><a href="#f">麝香豬</a></li>
+  <li><a href="#a">跳轉到藍瑞斯</a></li>
+  <li><a href="#b">跳轉到約克夏</a></li>
+  <li><a href="#c">跳轉到杜洛克</a></li>
+  <li><a href="#d">跳轉到盤克夏</a></li>
+  <li><a href="#e">跳轉到伊比利</a></li>
+  <li><a href="#f">跳轉到廄香</a></li>
 </ul>
 
-<div class="k1">
-    <img src="./小豬圖標2.jpg" alt=""><img src="./小豬圖標2.jpg" alt=""><img src="./小豬圖標2.jpg" alt=""><img src="./小豬圖標2.jpg" alt=""><img src="./小豬圖標2.jpg" alt=""><img src="./小豬圖標2.jpg" alt=""><img src="./小豬圖標2.jpg" alt="">
-</div>
+<!-- 目錄排版 -->
 
-<div class="main-wrapper">
-    <div class="content-area">
-        <section id="a">
-            <h3>藍瑞斯</h3>
-            <p>外貌: 藍瑞斯長著一對巨型大耳、修長體型、純白皮膚。<br>
-               特性: 具有高產仔、性格溫馴、乳汁充足。<br>
-               優勢: 成長速度雖慢於杜洛克，但飼料效率高。</p>
-            <img src="./藍瑞斯.jpg" alt="藍瑞斯">
-        </section>
+<style>
+.a1 {
+    display: flex;
+    align-items: center; 
+    gap: 15px;  
+    justify-content: center;         
+    width: 80%;           
+    margin: 0 auto;       
+}
 
-        <section id="b">
-            <h3>約克夏</h3>
-            <p>外貌：純白皮膚，直立雙耳與修長體型。<br>
-               特性：優異繁殖能力，母性好。<br>
-               優勢：生長極快，瘦肉比例高。</p>
-            <img src="約克夏.jpg" alt="約克夏">
-        </section>
 
-        <section id="c">
-            <h3>杜洛克</h3>
-            <p>外貌：紅棕色皮毛、半下垂耳朵。<br>
-               特性：肉質彈性佳，保水性好。<br>
-               優勢：生長最快、換肉率高。</p>
-            <img src="./杜洛克.jpg" alt="杜洛克">
-        </section>
+.hamburger-container {
+  width: 45px;
+  height: 45px;
+  background-color: #424242;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  
+  
+  position: absolute;   
+  left: 20px;           
+  top: 25px;            
+}
+.hamburger-icon {
+  width: 22px;
+  height: 3px;
+  background-color: #fff;
+  position: relative;
+}
+.hamburger-icon::before, .hamburger-icon::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  left: 0;
+}
+.hamburger-icon::before { top: -8px; }
+.hamburger-icon::after { bottom: 8px; }
 
-        <section id="d">
-            <h3>盤克夏</h3>
-            <p>外貌: 全身黑毛，但鼻、尾、四肢末端為白色（六白）。<br>
-               特性: 產仔少、生長慢。<br>
-               優勢: 豬肉界的神戶和牛，油脂風味極佳。</p>
-            <img src="./盤克夏.jpg" alt="盤克夏">
-        </section>
+.nav-menu {
+    display: none;
+    list-style: none;
+    padding: 15px;
+    margin-top: 10px;
+    border: 2px dashed #ffcbd5;
+    border-radius: 20px; 
+    background-color: rgba(255, 255, 255, 0.95); 
+    width: 200px; 
+    box-shadow: 0 8px 30px rgba(0,0,0,0.05); 
+}
 
-        <section id="e">
-            <h3>伊比利</h3>
-            <p>外貌: 皮膚多灰色或黑色，腿部修長。<br>
-               特性: 脂肪能滲透進肌肉纖維（油花）。<br>
-               優勢: 鮮嫩多汁，含高量油酸。</p>
-            <img src="./伊比利豬.jpg" alt="伊比利豬">
-        </section>
+.nav-menu li {
+    margin-bottom: 8px;
+}
 
-        <section id="f">
-            <h3>麝香</h3>
-            <p>外貌: 黑白相間，體型矮短，耳朵小而直立。<br>
-               特性: 高智商、膽小且好奇。<br>
-               優勢: 適合陪伴，壽命較長。</p>
-            <img src="./麝香豬.jpg" alt="麝香豬">
-        </section>
-    </div>
+.nav-menu li:last-child {
+    margin-bottom: 0;
+}
 
-    <aside class="fun-fact-sidebar">
-        <div class="fact-card">
-            <div style="font-size: 40px; text-align: center;">💡</div>
-            <h4 style="color: #d63384; text-align: center; border-bottom: 2px dashed #ffcbd5; padding-bottom: 10px;">豬豬小百科</h4>
-            <ul class="fact-list">
-                <li><strong>嗅覺天才</strong><p>比獵犬還靈敏，能聞到深處的松露。</p></li>
-                <li><strong>聰明小豬</strong><p>智商約等於三歲小孩。</p></li>
-                <li><strong>天生愛乾淨</strong><p>絕不在睡覺或進食處排泄。</p></li>
-                <li><strong>防曬大師</strong><p>泥巴浴是天然的防曬與防蟲劑。</p></li>
-            </ul>
-        </div>
-    </aside>
-</div>
+.nav-btn {
+    display: block; 
+    text-decoration: none;
+    color: #555; 
+    background-color: #f8f9fa;
+    padding: 10px 15px;
+    border-radius: 12px;
+    font-size: 15px;
+    text-align: center;
+    transition: all 0.3s ease; 
+    border: 1px solid transparent;
+}
+
+
+.nav-btn:hover {
+    background-color: #ffcbd5;
+    color: white;
+    transform: translateX(5px); 
+}
+.nav-menu.active {
+  display: block;
+}
+
+
+#menu-label {
+  display: none; 
+}
+#menu-label.active {
+  display: block;
+}
+
+</style>
+<!-- 裝飾用小豬那排 -->
+    <div class="menu-icon"></div>
+    <div class="k1">
+<img src="./小豬圖標2.jpg" width="100" alt=""><img src="./小豬圖標2.jpg" width="100" alt=""><img src="./小豬圖標2.jpg" width="100" alt=""><img src="./小豬圖標2.jpg" width="100" alt=""><img src="./小豬圖標2.jpg" width="100" alt=""><img src="./小豬圖標2.jpg" width="100" alt=""><img src="./小豬圖標2.jpg" width="100" alt=""><img src="./小豬圖標2.jpg" width="100" alt="">
+</div>  
+<style>
+.k1 {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    
+   
+    width: 80%;           
+    margin: 30px auto;   
+    
+    
+    border: 4px dashed #ffdada; 
+    
+    
+    padding: 25px 15px;
+    border-radius: 30px;
+    
+    
+    background-color: #ffffff; 
+}
+
+
+.k1 img {
+    width: 70px; 
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.k1 img:hover {
+    transform: scale(1.2) rotate(10deg);
+}
+</style>
+<!-- 目錄排版結束 -->
+
+
+<!-- 第三區塊 主區塊 豬隻品種區塊(藍瑞斯)-->
+
+    <h3 id="a">藍瑞斯</h3>
+   <p id="x1">外貌:藍瑞斯長著一對巨型大耳、修長體型、純白皮膚。
+    <br>特性:藍瑞斯具有高產仔、性格溫馴、乳汁充足。
+    <br>優勢:成長速度雖然慢於杜克洛，但能夠以較少的飼料換取到較多的肉。</p>
+    
+    <!-- 藍瑞斯圖片 -->
+
+    <img src="./藍瑞斯.jpg" width="200">
+    <br>
+  <a href= https://zh.wikipedia.org/zh-tw/%E7%BE%8E%E5%9B%BD%E9%95%BF%E7%99%BD%E7%8C%AA target="_blank">(此圖來源於維基百科)</a> 
+
+ 
+  
+  <!-- 豬隻品種區塊(約克夏) -->
+
+  <h3 id="b">約克夏</h3>
+  <p>
+    外貌：約克夏擁有純白皮膚，最具代表性的是其直立的雙耳與修長的體型。<br>
+    特性：具有優異的繁育能力，母豬母性好、乳汁充足，且生長性能穩定。<br>
+    優勢：生長速度極快，肉質瘦肉比例高，是商業豬場中不可或缺的優良品種。<br>
+  </p>
+  
+
+<!-- 約克夏圖片 -->
+
+      <img src="約克夏.jpg" width="200"><br>
+      <a href= https://zh.wikipedia.org/zh-tw/%E7%BE%8E%E5%9B%BD%E7%BA%A6%E5%85%8B%E5%A4%8F%E7%8C%AA target="_blank">(此圖來源於維基百科)</a>
+
+
+<!-- 豬隻品種區塊(杜洛克) -->
+
+ <h3 id="c">杜洛克</h3>
+ <p>
+    外貌：紅棕色皮毛、半下垂耳朵。<br>
+    特性：保水性好使肉質更有彈性。<br>
+    優勢：生長最快、換肉率高。<br>
+    </p>
+
+    <!-- 杜洛克圖片 -->
+
+    <img src="./杜洛克.jpg" width="200" alt=""><br>
+<a href= https://zh.wikipedia.org/zh-tw/%E6%9D%9C%E6%B4%9B%E5%85%8B%E7%8C%AA target="_blank">(此圖來源於維基百科)</a>
+
+ <!-- 豬隻品種區塊(盤克夏) -->
+
+<h3 id="d">盤克夏</h3>
+<p>
+ 外貌:全身覆蓋黑色的毛，但有六個地方是白色的，鼻端、尾端、四肢末端  。<br>
+特性:產仔數少、生長慢、體型小<br>
+優勢:被稱謂豬肉界的神戶和牛，高保水性、白色油脂。<br>
+</p>
+
+<!-- 盤克夏圖片 -->
+
+<img src="./盤克夏.jpg" width="200"><br>
+<a href= https://zh.wikipedia.org/zh-tw/%E5%B7%B4%E5%85%8B%E5%A4%8F%E7%8C%AA target="_blank">(此圖來源於維基百科)</a>
+
+<!-- 豬隻品種區塊(伊比利) -->
+
+<h3 id="e">伊比利</h3>
+<p>
+ 外貌:皮膚多為灰色或黑色，腿長且蹄部通常呈黑色。<br>
+特性:能將攝取的脂肪儲存在肌肉纖維之間（類似和牛的油花），而不是只在皮下。<br>
+優勢:抗氧化力、鮮嫩多肉汁、高油酸含量。<br>
+</p>
+
+<!-- 伊比利圖片 -->
+
+<img src="./伊比利豬.jpg" width="200" alt=""><br>
+<a href=https://zh.wikipedia.org/zh-tw/伊比利亚猪 target="_blank">(此圖來源於維基百科)</a>
+
+<!-- 豬隻品種區塊(麝香) -->
+
+<h3 id="f">麝香</h3>
+<p>
+外貌:最常見的是黑白相間，也有全黑或粉紅帶黑斑的、 肚子微下垂、背部稍微凹陷、耳朵小而直立。<br>
+特性:高智商、膽小且好奇。<br>
+優勢:壽命較長、陪伴性<br>
+</p>
+
+<!--麝香圖片  -->
+
+   <img src="./麝香豬.jpg" width="200" alt=""><br>
+    <a href="https://kmweb.moa.gov.tw/knowledge_view.php?id=8629" target="_blank">(此圖來源於農業知識入口網)</a><br>
+
+    <!-- 全部豬隻名稱排版 -->
+
+<style>
+ 
+    h3 {
+    
+    border-left: 8px solid #ff99ab; 
+    
+    
+    background: linear-gradient(90deg, #fff0f3 0%, transparent 100%);
+    
+    
+    padding: 10px 20px;
+    
+   
+    color: #444;
+    margin-top: 50px;    
+    margin-bottom: 20px; 
+    border-radius: 5px;  
+    
+    
+    border-bottom: 1px dashed #ffcbd5;
+}
+ </style>
+
+ <!-- 全部豬隻圖片排版 -->
+  
+  <style>
+img { 
+    margin: 15px 0;
+    border-radius: 15px; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+}
+  </style>
+<!-- 第四區塊 補充小百科區 -->
+
+
+<aside class="fun-fact-sidebar">
+<div class="fact-card">
+<div class="fact-icon">💡</div>
+<h4>豬豬小百科</h4>
+<ul class="fact-list">
+<li>
+ <strong>嗅覺天才</strong>
+<p>豬的嗅覺比獵犬還靈敏，能聞到地底深處的松露。</p>
+</li>
+<li>
+   <strong>聰明小豬</strong>  
+<p>智商與三歲小孩相當，甚至能學會操作搖桿玩簡單遊戲。</p>
+</li>
+<li>
+<strong>天生愛乾淨</strong>
+<p>只要空間足夠，豬絕對不會在睡覺或吃東西的地方排泄。</p>
+ </li>
+<li>
+<strong>防曬大師</strong>
+<p>泥巴浴不只是為了涼快，還能防止皮膚曬傷和昆蟲叮咬。</p>
+ </li>
+ </ul>
+ </div>
+</aside>
+<!-- 補充小百科排版區 -->
+<style>
+body{
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    color: #0c0c0c; 
+    border-bottom: 2px solid #f8d7da;
+    padding-bottom: 10px;
+}
+
+ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    background-color: #646464;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+}
+
+ul li a:hover {
+    background-color: #cccccc;
+} 
+</style>
+
+
+<style>
+.main-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.fun-fact-sidebar {
+    flex: 0 0 300px;  
+    position: sticky;
+    top: 50px; 
+}
+
+.fact-card {
+    background: #fff5f7;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 20px rgba(255, 182, 193, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.fact-card:hover {
+    transform: translateY(-5px); 
+}
+.fact-icon {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.fact-card h4 {
+    color: #d63384;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    border-bottom: 2px dashed #ffcbd5;
+    padding-bottom: 10px;
+}
+
+.fact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.fact-list li {
+    margin-bottom: 15px;
+}
+
+.fact-list strong {
+    color: #854d0e;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.fact-list p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+    margin: 0;
+}
+</style>
+<style>
+.fact-list {
+    list-style: none; 
+    padding: 0;
+}
+
+.fact-list li {
+    margin-bottom: 20px;
+    padding-left: 35px; 
+    position: relative; 
+}
+
+
+.fact-list li::before {
+    content: "🐷";    
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 20px;
+}
+
+.fact-list strong {
+    color: #d63384;
+    display: block;
+    margin-bottom: 3px;
+    font-size: 1.05rem;
+}
+
+.fact-list p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
+}
+</style>
+
+<!-- java區塊 負責控制目錄功能 -->
 
 <script>
   const toggleBtn = document.getElementById('menu-toggle');
   const navList = document.getElementById('nav-list');
+  const menuLabel = document.getElementById('menu-label');
 
-  toggleBtn.addEventListener('click', (e) => {
+  toggleBtn.addEventListener('click', function() {
+    // 顯示或隱藏
     navList.classList.toggle('active');
-    e.stopPropagation();
+    menuLabel.classList.toggle('active');
   });
 
-  // 點擊空白處關閉選單
-  document.addEventListener('click', () => {
-    navList.classList.remove('active');
-  });
-
-  // 點擊連結後自動收合
+  // 自動收合
   document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
       navList.classList.remove('active');
+      menuLabel.classList.remove('active');
     });
   });
 </script>
-
-</body>
-</html>
